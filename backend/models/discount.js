@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const discountSchema = new mongoose.Schema({
-  Business: { type: String },
-  URL: { type: String },
-  Discount: { type: String },
-  Eligibility: { type: String },
-  Categories: { type: String },
+  business: { type: String },
+  url: { type: String },
+  discount: { type: String },
+  eligibility: { type: String },
+  categories: { type: String },
 });
 // Declares a new discount model
 
