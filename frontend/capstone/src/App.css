@@ -1,0 +1,26 @@
+.outerContainer {
+  margin: 0 auto;
+}
+
+.navContainer {
+  width: 80%;
+  border: solid red;
+  display:flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+
+}
+
+.navItem {
+  border: solid blue;
+  width: 200px;
+  text-align: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
