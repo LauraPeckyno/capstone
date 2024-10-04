@@ -1,16 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const discountsController = require('../controllers/discountsController')
+const discountsController = require('../controllers/discountsController');
 
-router.get('/',discountsController.readDiscount);
-// -->Retrieve all discount in DB
-router.get('/:id',discountsController.readDiscountById);
-// -->Retrieve Specific discount in DB
-router.post('/',discountsController.createDiscount);
-// --> Add a discount to DB
-router.put('/:id',discountsController.updateDiscount);
-// --> Edit a Existing discount in DB
-router.delete('/:id',discountsController.deleteDiscount);
-// --> Delete a Existing discount in DB
+router.get('/', discountsController.readDiscount); // Get all discounts
+router.get('/:id', discountsController.readDiscountById); // Get discount by ID
+router.post('/', discountsController.createDiscount); // Create a new discount
+router.put('/:id', discountsController.updateDiscount); // Update discount by ID
+router.delete('/:id', discountsController.deleteDiscount); // Delete discount by ID
+
+// New route for fetching discounts by category
+router.get('/category/:category', discountsController.getDiscountsByCategory); // Get discounts by category
+
+// Error handler
+router.use((err, req, res, next) => {
+  console.error(err);
+  res.status(500).json({ message: 'Internal Server Error' });
+});
 
 module.exports = router;

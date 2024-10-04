@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
 const discountSchema = new mongoose.Schema({
-  business: { type: String },
-  url: { type: String },
-  discount: { type: String },
-  eligibility: { type: String },
-  categories: { type: String },
-});
+  business: { type: String, required: true },
+  url: { type: String, required: true },
+  discount: { type: String, required: true },
+  eligibility: { type: String, required: true },
+  category: { type: String, required: true },
+}, { timestamps: true });
 // Declares a new discount model
 
 const Discount = mongoose.model("Discount", discountSchema);
