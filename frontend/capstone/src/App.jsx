@@ -2,15 +2,6 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import Groceries from "./components/Groceries";
-import Healthcare from "./components/Healthcare";
-import Index from "./components/Index";
-import Misc from "./components/Misc";
-import Restaurants from "./components/Restaurants";
-import Shopping from "./components/Shopping";
-import Telecommunications from "./components/Telecommunications";
-import Transportation from "./components/Transportation";
-import Travel from "./components/Travel";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router } from 'react-router-dom';
 import AppRoutes from './components/AppRoutes';
