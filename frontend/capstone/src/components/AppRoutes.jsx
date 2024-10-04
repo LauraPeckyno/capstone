@@ -7,17 +7,20 @@ import Shopping from "./Shopping";
 import Telecommunications from "./Telecommunications";
 import Transportation from "./Transportation";
 import Travel from "./Travel";
-import { Routes, Route } from 'react-router-dom';
+import SocialServices from "./SocialServices";
+import { Routes, Route } from "react-router-dom";
+import Entertainment from "./Entertainment";
 import { Link } from "react-router-dom";
 
 function AppRoutes() {
   return (
     <>
       <Routes>
+        <Route path="/entertainment" element={<Entertainment />} />
         <Route path="/groceries" element={<Groceries />} />
         <Route path="/healthcare" element={<Healthcare />} />
         <Route path="/index" element={<Index />} />
-        <Route path="/misc" element={<Misc />} />
+        <Route path="/socialservices" element={<SocialServices />} />
         <Route path="/restaurants" element={<Restaurants />} />
         <Route path="/shopping" element={<Shopping />} />
         <Route path="/telecommunications" element={<Telecommunications />} />

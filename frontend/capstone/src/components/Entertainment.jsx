@@ -1,11 +1,11 @@
 import React from "react";
 
-function Telecommunications() {
+function Entertainment() {
   return (
     <>
       <div className="outerContainer">
-        <div className="imageContainerTelecomm"></div>
-        <h1>Telecommunications</h1>
+        <div className="imageContainerEntertainment"></div>
+        <h1>Entertainment</h1>
         <p>
           We've scoured the web to find the best SENIOR DISCOUNTS for you!
           Select a category to see a list of discounts available.
@@ -20,4 +20,4 @@ function Telecommunications() {
   );
 }
 
-export default Telecommunications;
+export default Entertainment;
