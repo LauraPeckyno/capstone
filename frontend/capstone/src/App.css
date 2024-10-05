@@ -72,17 +72,20 @@ height:500px;
 }
 
 .discountGridContainer {
-border: solid blue;
+/* border: solid blue; */
 display: flex;
 flex-wrap: wrap;
 justify-content: space-evenly;
 }
 
 .discountGridItem {
-  border: solid 0.25px rgba(128, 128, 128, 0.178);
+  border: solid 0.25px rgba(119, 119, 119, 0.219);
+  box-shadow: 5px 5px 5px 5px rgba(201, 197, 197, 0.295);
   border-radius: 20px;
 width: 40%;
-height: 400px;
+/* height: 250px; */
+margin: 15px;
+padding: 20px;
 min-width: 350px;
 }
 
