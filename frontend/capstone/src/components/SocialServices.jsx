@@ -31,9 +31,11 @@ function SocialServices() {
           {discounts && discounts.map(discount => (
             <div key={discount._id} className="discountGridItem">
               <h3>{discount.business}</h3>
-              <p>{discount.eligibility}</p>
-              <p>{discount.discount}</p>
-              <a href={discount.url} target="_blank" rel="noopener noreferrer">Visit {discount.business}</a>
+              <p>{discount.address}<br></br>
+              {discount.city} {discount.state} {discount.zip}</p>
+              <p><strong>Description of services:</strong> {discount.discount}</p>
+              <p>Phone: {discount.phone}</p>
+              <a href={discount.url} target="_blank" rel="noopener noreferrer">Visit the {discount.business} website</a>
             </div>
           ))}
         </div>
