@@ -6,7 +6,7 @@ function Navbar() {
     <>
       <div className="navContainer">
         <span className="logo">
-          Senior<br></br>Discounts!
+          <img src="/logocans.png" width="125px" />
         </span>
         <Link to="/index" className="navItem">
           <div className="iconContainer">

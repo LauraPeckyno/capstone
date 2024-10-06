@@ -1,28 +1,26 @@
 .outerContainer {
   /* border: solid purple; */
-  width:75vw;
+  width: 75vw;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
-  padding:1em;
+  padding: 1em;
   margin: 0 auto;
-
 }
 
 .navContainer {
   border-bottom: solid 0.5px rgba(128, 128, 128, 0.178);
-  width:100%;
-  display:flex;
+  width: 100%;
+  display: flex;
   flex-wrap: wrap;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   align-content: center;
   color: black;
   text-decoration: none;
   padding: 10px;
   box-shadow: 0px 0px 8px 0px rgba(66, 62, 62, 0.164);
-
 }
 
 .navItem {
@@ -36,11 +34,7 @@
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 12
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 12;
 }
 
 .navItem:hover {
@@ -53,8 +47,6 @@
   text-decoration: none;
 }
 
-
-
 .iconContainer {
   align-self: center;
 }
@@ -62,31 +54,31 @@
 .imageContainer {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-background-image: url("https://plus.unsplash.com/premium_photo-1683141052679-942eb9e77760?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-background-size:cover;
-background-repeat: no-repeat;
-width: 100%;
-display:flex;
-justify-content: flex-end;
-height:500px;
+  background-image: url("https://plus.unsplash.com/premium_photo-1683141052679-942eb9e77760?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 500px;
 }
 
 .discountGridContainer {
-/* border: solid blue; */
-display: flex;
-flex-wrap: wrap;
-justify-content: space-evenly;
+  /* border: solid blue; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .discountGridItem {
   border: solid 0.25px rgba(119, 119, 119, 0.219);
   box-shadow: 5px 5px 5px 5px rgba(201, 197, 197, 0.295);
   border-radius: 20px;
-width: 40%;
-/* height: 250px; */
-margin: 15px;
-padding: 20px;
-min-width: 350px;
+  width: 40%;
+  /* height: 250px; */
+  margin: 15px;
+  padding: 20px;
+  min-width: 350px;
 }
 
 .allerta-stencil-regular {
@@ -96,134 +88,161 @@ min-width: 350px;
 }
 
 .logo {
-  font-family: "Allerta Stencil", sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  color: red;
-  border: dotted blue;
-  border-radius: 30px;
-  padding: 15px;
-  text-align: center;
-
 }
 .pageTitle {
   border: solid 0.25px rgba(128, 128, 128, 0.315);
   border-radius: 20px;
-background-color: rgb(255, 255, 255);
-width:100%;
-align-self:flex-start;
-text-align: left;
-margin:25px 25px 25px 25px;
-padding: 5px;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  align-self: flex-start;
+  text-align: left;
+  margin: 25px 25px 25px 25px;
+  padding: 5px;
 }
 
 .imageContainerEntertainment {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-background-image: url("https://plus.unsplash.com/premium_photo-1723780828572-f4e5de28f49b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-background-size:cover;
-background-repeat: no-repeat;
-width: 100%;
-display:flex;
-justify-content: flex-end;
-height:500px;
+  background-image: url("https://plus.unsplash.com/premium_photo-1723780828572-f4e5de28f49b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 500px;
 }
 
 .imageContainerGroceries {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-background-image: url("https://plus.unsplash.com/premium_photo-1663126491340-e96b3b7205b6?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-background-size:cover;
-background-repeat: no-repeat;
-width: 100%;
-display:flex;
-justify-content: flex-end;
-height:500px;
+  background-image: url("https://plus.unsplash.com/premium_photo-1663126491340-e96b3b7205b6?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 500px;
 }
 
 .imageContainerHealthcare {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-background-image: url("https://plus.unsplash.com/premium_photo-1681995528803-12eb15daf147?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-background-size:cover;
-background-repeat: no-repeat;
-width: 100%;
-display:flex;
-justify-content: flex-end;
-height:500px;
+  background-image: url("https://plus.unsplash.com/premium_photo-1681995528803-12eb15daf147?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 500px;
 }
-
 
 .imageContainerTelecomm {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-background-image: url("https://plus.unsplash.com/premium_photo-1661338963863-7544b69e1968?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-background-size:cover;
-background-repeat: no-repeat;
-width: 100%;
-display:flex;
-justify-content: flex-end;
-height:500px;
+  background-image: url("https://plus.unsplash.com/premium_photo-1661338963863-7544b69e1968?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 500px;
 }
 
 .imageContainerSocialServices {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-background-image: url("https://images.unsplash.com/photo-1666885181601-73c2f69ac354?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-background-size:cover;
-background-repeat: no-repeat;
-width: 100%;
-display:flex;
-justify-content: flex-end;
-height:500px;
+  background-image: url("https://images.unsplash.com/photo-1666885181601-73c2f69ac354?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 500px;
 }
 
 .imageContainerRestaurants {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-background-image: url("https://images.unsplash.com/photo-1533640924469-f04e06f8898d?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-background-size:cover;
-background-repeat: no-repeat;
-width: 100%;
-display:flex;
-justify-content: flex-end;
-height:500px;
+  background-image: url("https://images.unsplash.com/photo-1533640924469-f04e06f8898d?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 500px;
 }
 
 .imageContainerShopping {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-background-image: url("https://images.unsplash.com/photo-1584797802294-190bd128cc83?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-background-size:cover;
-background-repeat: no-repeat;
-width: 100%;
-display:flex;
-justify-content: flex-end;
-height:500px;
+  background-image: url("https://images.unsplash.com/photo-1584797802294-190bd128cc83?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 500px;
 }
 
 .imageContainerTransportation {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-background-image: url("https://plus.unsplash.com/premium_photo-1682145057803-52f4640edd1e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-background-size:cover;
-background-repeat: no-repeat;
-width: 100%;
-display:flex;
-justify-content: flex-end;
-height:500px;
+  background-image: url("https://plus.unsplash.com/premium_photo-1682145057803-52f4640edd1e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 500px;
 }
 
 .imageContainerTravel {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-background-image: url("https://plus.unsplash.com/premium_photo-1679758630055-99ebb2df7d77?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-background-size:cover;
-background-repeat: no-repeat;
-width: 100%;
-display:flex;
-justify-content: flex-end;
-height:500px;
+  background-image: url("https://plus.unsplash.com/premium_photo-1679758630055-99ebb2df7d77?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 500px;
 }
 
+.featuredContainer {
+  background-color: rgba(9, 248, 100, 0.322);
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
+.featuredGridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.discountGridItem {
+  border: solid 0.25px rgba(119, 119, 119, 0.219);
+  background-color: white;
+  box-shadow: 5px 5px 5px 5px rgba(201, 197, 197, 0.295);
+  border-radius: 20px;
+  width: 40%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 2px;
+  padding-bottom: 10px;
+  min-width: 350px;
+  font-size: small;
+}
+
+.featuredText {
+  text-align: center;
+}
+
+.categoryText {
+  width: 24%;
+  border-radius: 25px;
+  padding: 3px;
+  text-align: center;
+  background-color: rgb(248, 231, 235);
+}

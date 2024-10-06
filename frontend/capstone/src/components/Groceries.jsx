@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Featured from "./Featured";
+import Discounts from "./Discounts";
 
 function Groceries() {
-
   const [discounts, setDiscounts] = useState([]);
-  const category = 'groceries';
+  const category = "groceries";
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/discounts/category/${category}`)
-      .then(response => {
-        console.log(response.data); // Verify API response
-        setDiscounts(response.data.discounts); // Set the discounts from response
+    axios
+      .get(`http://localhost:3000/discounts/category/${category}`)
+      .then((response) => {
+        setDiscounts(response.data.discounts);
       })
-      .catch(error => {
-        console.error('Error fetching discounts:', error);
+      .catch((error) => {
+        console.error("Error fetching discounts:", error);
       });
   }, []);
 
@@ -26,21 +27,11 @@ function Groceries() {
           We've scoured the web to find the best SENIOR DISCOUNTS for you!
           Select a category to see a list of discounts available.
         </p>
-        <h2>Featured Discounts</h2>
-        <div className="discountGridContainer">
-          {discounts && discounts.map(discount => (
-            <div key={discount._id} className="discountGridItem">
-              <h3>{discount.business}</h3>
-              <p>{discount.eligibility}</p>
-              <p>{discount.discount}</p>
-              <a href={discount.url} target="_blank" rel="noopener noreferrer">Visit {discount.business}</a>
-            </div>
-          ))}
-        </div>
+        <Featured category="groceries" featured="true" />
+        <Discounts category="groceries" />
       </div>
     </>
   );
 }
-
 
 export default Groceries;
