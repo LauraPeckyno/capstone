@@ -1,5 +1,4 @@
 .outerContainer {
-  /* border: solid purple; */
   width: 75vw;
   display: flex;
   justify-content: center;
@@ -261,9 +260,9 @@
 }
 
 .searchField {
-font-size: 16px;
-width: 300px;
-padding: 8px;
+  font-size: 16px;
+  width: 300px;
+  padding: 8px;
 }
 
 .searchBtn {
@@ -281,7 +280,7 @@ padding: 8px;
 }
 
 .hometextContainer {
-  display:flex;
+  display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: 20px;
@@ -292,13 +291,12 @@ padding: 8px;
   width: 50%;
 }
 
-
 .pagination .pageBtn {
   margin: 0 5px;
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: #fff;
   cursor: pointer;
 }
