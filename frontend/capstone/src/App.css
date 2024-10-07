@@ -246,3 +246,48 @@
   text-align: center;
   background-color: rgb(248, 231, 235);
 }
+
+.searchBar {
+  padding: 25px;
+  margin: 10px;
+  border-radius: 8px;
+  border: 0.5px solid rgba(128, 128, 128, 0.24);
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(128, 128, 128, 0.13);
+  width: 30%;
+  align-items: center;
+}
+
+.searchField {
+font-size: 16px;
+width: 300px;
+padding: 8px;
+}
+
+.searchBtn {
+  background-color: #3db141;
+  color: white;
+  font-weight: 600;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.searchBtn:hover {
+  background-color: #45a049;
+}
+
+.hometextContainer {
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.leftText {
+  width: 50%;
+}

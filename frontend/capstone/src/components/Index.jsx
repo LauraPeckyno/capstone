@@ -20,12 +20,13 @@ function Index() {
   }, []);
 
   const handleSearch = (searchTerm) => {
-    axios.get(`http://localhost:3000/discounts/search?q=${searchTerm}`)
-      .then(response => {
+    axios
+      .get(`http://localhost:3000/discounts/search?q=${searchTerm}`)
+      .then((response) => {
         setSearchResults(response.data.discounts);
       })
-      .catch(error => {
-        console.error('Error searching discounts:', error);
+      .catch((error) => {
+        console.error("Error searching discounts:", error);
       });
   };
 
@@ -33,9 +34,16 @@ function Index() {
     <div className="outerContainer">
       <div className="imageContainer"></div>
       <h1>Find your Pennsylvania Senior Discounts!</h1>
-      <p>
-        We've scoured the web to find the best SENIOR DISCOUNTS for you. You can find some of the best SENIOR DISCOUNTS and PROGRAMS below, or simply explore the categories for full lists.</p>
+      <div className="hometextContainer">
+        <p className="leftText">
+          We've scoured the web to find the best SENIOR DISCOUNTS for you.
+          You'll find some of the best featured below. You can also use the
+          categories to browse available discounts or search for something
+          specific using the search bar.
+        </p>
         <SearchBar onSearch={handleSearch} />
+      </div>
+
       {searchResults.length > 0 ? (
         <SearchResults discounts={searchResults} />
       ) : (

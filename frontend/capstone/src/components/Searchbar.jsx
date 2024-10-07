@@ -9,14 +9,15 @@ function SearchBar({ onSearch }) {
   };
 
   return (
-    <form onSubmit={handleSearch}>
+    <form className="searchBar" onSubmit={handleSearch}>
       <input
+        className="searchField"
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         placeholder="Search by category or keyword"
       />
-      <button type="submit">Search</button>
+      <input className="searchBtn" type="submit" value="Search" />
     </form>
   );
 }
