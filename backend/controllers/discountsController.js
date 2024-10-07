@@ -85,14 +85,18 @@ const getFeaturedDiscounts = async (req, res) => {
 };
 
 const getDiscountsByCategory = async (req, res) => {
-  try {
-    const category = req.params.category;
-    const discounts = await Discount.find({ category });
-    res.json({ discounts });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Error fetching discounts" });
-  }
+  const category = req.params.category;
+  const page = req.query.page || 1;
+  const limit = 6;
+
+  const discounts = await Discount.find({ category })  // pagination
+    .skip((page - 1) * limit)
+    .limit(limit);
+
+  const totalDiscounts = await Discount.countDocuments({ category });
+  const totalPages = Math.ceil(totalDiscounts / limit);
+
+  res.json({ discounts, totalPages });
 };
 
 const searchDiscounts = async (req, res) => {
