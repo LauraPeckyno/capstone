@@ -10,6 +10,9 @@ router.get(
   discountsController.getFeaturedDiscountsByCategory
 );
 
+// New route for search results
+router.get('/search', discountsController.searchDiscounts); // get discounts by search term
+
 // New route for fetching discounts by category
 router.get("/category/:category", discountsController.getDiscountsByCategory); // Get discounts by category
 

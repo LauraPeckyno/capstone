@@ -95,6 +95,19 @@ const getDiscountsByCategory = async (req, res) => {
   }
 };
 
+const searchDiscounts = async (req, res) => {
+  const query = req.query.q;
+  const discounts = await Discount.find({
+    $or: [
+      { category: { $regex: query, $options: 'i' } },
+      { business: { $regex: query, $options: 'i' } },
+      { discount: { $regex: query, $options: 'i' } },
+      { eligibility: { $regex: query, $options: 'i' } },
+    ],
+  });
+  res.json({ discounts });
+};
+
 module.exports = {
   readDiscount,
   readDiscountById,
@@ -104,4 +117,5 @@ module.exports = {
   getDiscountsByCategory,
   getFeaturedDiscountsByCategory,
   getFeaturedDiscounts,
+  searchDiscounts,
 };
