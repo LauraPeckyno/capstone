@@ -1,8 +1,8 @@
-# React + Vite
+Capstone project for Laura Peckyno
+PerScholas cohort #31
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application is a resource for older adults interested in finding senior discounts. I've tried to limit this to Pennsylvania to make the data scraping a little more managable. 
+No public database was available for use, so I scraped data from many websites to generate my own database of discounts and social services. These are categorized and, when possible, include descriptions, urls, and eligibility details.
 
-Currently, two official plugins are available:
+The site allows users to find discounts by category, featured status, or by search terms.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
