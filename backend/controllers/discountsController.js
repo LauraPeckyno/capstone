@@ -62,6 +62,7 @@ const deleteDiscount = async (req, res) => {
   res.json({ success: "discount deleted" });
 };
 
+// find featured discounts by category
 const getFeaturedDiscountsByCategory = async (req, res) => {
   try {
     const category = req.params.category;
@@ -74,6 +75,7 @@ const getFeaturedDiscountsByCategory = async (req, res) => {
   }
 };
 
+// find featured discounts
 const getFeaturedDiscounts = async (req, res) => {
   try {
     const discounts = await Discount.find({ featured: true });
@@ -84,29 +86,30 @@ const getFeaturedDiscounts = async (req, res) => {
   }
 };
 
+// get discounts by category
 const getDiscountsByCategory = async (req, res) => {
   const category = req.params.category;
   const page = req.query.page || 1;
   const limit = 6;
 
-  const discounts = await Discount.find({ category })  // pagination
+  // setting up the number of pages from the results
+  const discounts = await Discount.find({ category }) // pagination
     .skip((page - 1) * limit)
     .limit(limit);
-
   const totalDiscounts = await Discount.countDocuments({ category });
   const totalPages = Math.ceil(totalDiscounts / limit);
-
   res.json({ discounts, totalPages });
 };
 
+// controller for the searchbar
 const searchDiscounts = async (req, res) => {
   const query = req.query.q;
   const discounts = await Discount.find({
     $or: [
-      { category: { $regex: query, $options: 'i' } },
-      { business: { $regex: query, $options: 'i' } },
-      { discount: { $regex: query, $options: 'i' } },
-      { eligibility: { $regex: query, $options: 'i' } },
+      { category: { $regex: query, $options: "i" } },
+      { business: { $regex: query, $options: "i" } },
+      { discount: { $regex: query, $options: "i" } },
+      { eligibility: { $regex: query, $options: "i" } },
     ],
   });
   res.json({ discounts });

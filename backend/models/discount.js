@@ -19,6 +19,6 @@ const discountSchema = new mongoose.Schema(
 // Declares a new discount model
 
 const Discount = mongoose.model("Discount", discountSchema);
-// Access to monggose variables to connect the Schema and our CRUD routes
+// Access to mongoose variables to connect the Schema and our CRUD routes
 
 module.exports = Discount;
