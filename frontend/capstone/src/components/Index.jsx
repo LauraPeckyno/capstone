@@ -36,9 +36,8 @@ function Index() {
       <h1>Find your Pennsylvania Senior Discounts!</h1>
       <div className="hometextContainer">
         <p className="leftText">
-          We've scoured the web to find the best SENIOR DISCOUNTS for you.
-          You'll find some of the best featured below. You can also use the
-          categories to browse available discounts or search for something
+          We've scoured the web to find some of Pennsylvania's best SENIOR DISCOUNTS for you.
+          Check out the featured opportunities below. You can also browse discounts by category using the menu or search for something
           specific using the search bar.
         </p>
         <SearchBar onSearch={handleSearch} />

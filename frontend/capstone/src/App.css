@@ -213,6 +213,7 @@
   border-radius: 15px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-bottom: 15px;
 }
 
 .featuredGridContainer {
@@ -240,7 +241,7 @@
 }
 
 .categoryText {
-  width: 24%;
+  width: 30%;
   border-radius: 25px;
   padding: 3px;
   text-align: center;
@@ -253,9 +254,9 @@
   border-radius: 8px;
   border: 0.5px solid rgba(128, 128, 128, 0.24);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: rgba(128, 128, 128, 0.13);
-  width: 30%;
   align-items: center;
 }
 
@@ -285,9 +286,45 @@ padding: 8px;
   flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 100%;
 }
 
 .leftText {
   width: 50%;
+}
+
+
+.pagination .pageBtn {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pagination .pageBtn.active {
+  background-color: #3e8e41;
+}
+
+.pagination .pageBtn:hover {
+  background-color: #3e8e41;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerItem {
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 6px;
 }

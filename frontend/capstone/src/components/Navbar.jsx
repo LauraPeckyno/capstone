@@ -5,8 +5,8 @@ function Navbar() {
   return (
     <>
       <div className="navContainer">
-        <span className="logo">
-          <img src="/logocans.png" width="125px" />
+        <span className="logo"><a href="/">
+          <img src="/logocans.png" width="125px" alt=" a drawing of an elderly man holding a billfold and standing in front of a keystone" /></a>
         </span>
         <Link to="/index" className="navItem">
           <div className="iconContainer">

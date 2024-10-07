@@ -1,6 +1,12 @@
 import React from "react";
 
 function Featuredhome({ discounts }) {
+    // Sort discounts by category before rendering
+    const sortedDiscounts = discounts && discounts.sort((a, b) => {
+      if (a.category < b.category) return -1;
+      if (a.category > b.category) return 1;
+      return 0;
+    });
   return (
     <div className="featuredContainer">
       <h3>Featured Discounts</h3>
