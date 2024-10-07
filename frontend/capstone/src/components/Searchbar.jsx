@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+// serachbar for the homepage
 function SearchBar({ onSearch }) {
   const [searchTerm, setSearchTerm] = useState('');
 

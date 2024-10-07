@@ -6,6 +6,7 @@ function Discountssocial({ category }) {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
+  // I needed a slightly different discount format for these social services becuase they aren't technically discounts. I thought it was important to include them, so I've just made their own version of the component
   useEffect(() => {
     axios
       .get(`http://localhost:3000/discounts/category/${category}?page=${page}`)

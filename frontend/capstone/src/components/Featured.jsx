@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+// these are the featured discounts. I've created at least 2 per category. These could be monetized if the app was taken to the next level.
+// it's basically the same as the category version, but only getting the ones with a featured value of true
 function Featured({ category, featured }) {
   const [discounts, setDiscounts] = useState([]);
 

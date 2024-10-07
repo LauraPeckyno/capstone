@@ -1,5 +1,6 @@
 import React from 'react';
 
+// uses the seaarchbar to search database for user terms then feeds them to the page 
 function SearchResults({ discounts }) {
   return (
     <div className="searchResultsContainer">

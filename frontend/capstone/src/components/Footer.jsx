@@ -1,5 +1,6 @@
 import React from 'react'
 
+// adding a footer with the contact, copyrite, and privacy links
 function Footer() {
   return (
     

@@ -7,11 +7,13 @@ function Entertainment() {
   const [discounts, setDiscounts] = useState([]);
   const category = "entertainment";
 
+// gets the discounts in the entertainment category
   useEffect(() => {
     axios
       .get(`http://localhost:3000/discounts/category/${category}`)
       .then((response) => {
-        setDiscounts(response.data.discounts);
+        console.log(response.data); // Verifying API response
+        setDiscounts(response.data.discounts);  // Set the discounts from response
       })
       .catch((error) => {
         console.error("Error fetching discounts:", error);
@@ -23,8 +25,7 @@ function Entertainment() {
       <div className="imageContainerEntertainment"></div>
       <h1>Entertainment</h1>
       <p>
-        We've scoured the web to find the best SENIOR DISCOUNTS for you! Select
-        a category to see a list of discounts available.
+        We've scoured the web to find the best SENIOR DISCOUNTS for you! Here are some of our favorite ENTERTAINMENT DISCOUNTS.
       </p>
       <Featured category="entertainment" featured={true} />
       <Discounts category="entertainment" />

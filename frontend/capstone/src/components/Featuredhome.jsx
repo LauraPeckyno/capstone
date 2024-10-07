@@ -1,5 +1,8 @@
 import React from "react";
 
+// This is the featured discounts grid for the homepage. 
+// I've added some styling to this so the categories are highlighted
+
 function Featuredhome({ discounts }) {
     // Sort discounts by category before rendering
     const sortedDiscounts = discounts && discounts.sort((a, b) => {

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// navbar for all pages
 function Navbar() {
   return (
     <>

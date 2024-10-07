@@ -10,11 +10,12 @@ import Travel from "./Travel";
 import SocialServices from "./SocialServices";
 import { Routes, Route } from "react-router-dom";
 import Entertainment from "./Entertainment";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";  not needed here
 
 function AppRoutes() {
   return (
-    <>
+    <> 
+    {/* routes for all of the category pages and the homepage */}
       <Routes>
         <Route path="/entertainment" element={<Entertainment />} />
         <Route path="/groceries" element={<Groceries />} />

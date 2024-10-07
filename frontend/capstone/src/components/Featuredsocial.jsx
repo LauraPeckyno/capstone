@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+// this is the featured listing for the social services. As I mentioned with the discounts, this category needed its own styling due to the type of opportunity.
+
 function Featuredsocial({ category, featured }) {
   const [discounts, setDiscounts] = useState([]);
 

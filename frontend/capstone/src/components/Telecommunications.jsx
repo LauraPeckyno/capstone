@@ -3,10 +3,12 @@ import axios from "axios";
 import Featured from "./Featured";
 import Discounts from "./Discounts";
 
+// for telecommunications category
 function Telecommunications() {
   const [discounts, setDiscounts] = useState([]);
   const category = "telecommunications";
 
+   // getting the data by category from the database
   useEffect(() => {
     axios
       .get(`http://localhost:3000/discounts/category/${category}`)

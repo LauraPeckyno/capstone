@@ -3,15 +3,18 @@ import axios from "axios";
 import Featured from "./Featured";
 import Discounts from "./Discounts";
 
+ // getting the data by category from the database
 function Groceries() {
   const [discounts, setDiscounts] = useState([]);
   const category = "groceries";
 
+  // gets the groceries data and feeds it into the discount grid
   useEffect(() => {
     axios
       .get(`http://localhost:3000/discounts/category/${category}`)
       .then((response) => {
-        setDiscounts(response.data.discounts);
+        console.log(response.data); // Verifying API response
+        setDiscounts(response.data.discounts); // Setting the discounts from response
       })
       .catch((error) => {
         console.error("Error fetching discounts:", error);
@@ -24,8 +27,7 @@ function Groceries() {
         <div className="imageContainerGroceries"></div>
         <h1>Groceries</h1>
         <p>
-          We've scoured the web to find the best SENIOR DISCOUNTS for you!
-          Select a category to see a list of discounts available.
+          We've scoured the web to find the best SENIOR DISCOUNTS for you! Here are some of our favorite GROCERY DISCOUNTS.
         </p>
         <Featured category="groceries" featured="true" />
         <Discounts category="groceries" />
