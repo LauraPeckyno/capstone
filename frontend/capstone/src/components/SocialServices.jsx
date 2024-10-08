@@ -28,7 +28,7 @@ function SocialServices() {
         <h1>Social Services</h1>
         <p>
           We've scoured the web to find the best SENIOR DISCOUNTS for you!
-          Select a category to see a list of discounts available.
+          Here are some of our favorite FREE SOCIAL SERVICES.
         </p>
         <Featuredsocial category="social_services" featured="true" />
         <Discountssocial category="social_services" />

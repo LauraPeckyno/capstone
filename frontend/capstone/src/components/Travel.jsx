@@ -28,7 +28,7 @@ function Travel() {
         <h1>Travel</h1>
         <p>
           We've scoured the web to find the best SENIOR DISCOUNTS for you!
-          Select a category to see a list of discounts available.
+          Here are some of our favorite TRAVEL DISCOUNTS.
         </p>
         <Featured category="travel" featured="true" />
         <Discounts category="travel" />

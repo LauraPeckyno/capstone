@@ -1,7 +1,6 @@
 import Groceries from "./Groceries";
 import Healthcare from "./Healthcare";
 import Index from "./Index";
-import Misc from "./Misc";
 import Restaurants from "./Restaurants";
 import Shopping from "./Shopping";
 import Telecommunications from "./Telecommunications";

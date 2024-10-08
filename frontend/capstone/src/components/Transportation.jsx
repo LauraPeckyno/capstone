@@ -28,7 +28,7 @@ function Transportation() {
         <h1>Transportation</h1>
         <p>
           We've scoured the web to find the best SENIOR DISCOUNTS for you!
-          Select a category to see a list of discounts available.
+          Here are some of our favorite TRANSPORTATION DISCOUNTS.
         </p>
         <Featured category="transportation" featured="true" />
         <Discounts category="transportation" />

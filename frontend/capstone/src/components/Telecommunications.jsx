@@ -28,7 +28,7 @@ function Telecommunications() {
         <h1>Telecommunications</h1>
         <p>
           We've scoured the web to find the best SENIOR DISCOUNTS for you!
-          Select a category to see a list of discounts available.
+          Here are some of our favorite TELECOMMUNICATIONS DISCOUNTS.
         </p>
         <Featured category="telecommunications" featured="true" />
         <Discounts category="telecommunications" />

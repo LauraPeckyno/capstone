@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import { Helmet } from 'react-helmet';
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router } from 'react-router-dom';
 import AppRoutes from './components/AppRoutes';
@@ -31,6 +31,9 @@ function App() {
 
   return (
     <div className="App">
+            <Helmet>
+        <meta property="og:image" content="./money.jpg" />
+      </Helmet>
       <Router>
     <Navbar />
     <AppRoutes />

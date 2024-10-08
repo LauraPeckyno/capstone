@@ -30,7 +30,7 @@ function Shopping() {
 
         <p>
           We've scoured the web to find the best SENIOR DISCOUNTS for you!
-          Select a category to see a list of discounts available.
+          Here are some of our favorite SHOPPING DISCOUNTS.
         </p>
         <Featured category="shopping" featured="true" />
         <Discounts category="shopping" />

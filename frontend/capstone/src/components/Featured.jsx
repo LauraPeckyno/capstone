@@ -21,7 +21,7 @@ function Featured({ category, featured }) {
 
   return (
     <div className="featuredContainer">
-      <h3>Featured Discounts</h3>
+      <h3 className="featuredHeaderText">Featured Discounts</h3>
       <div className="discountGridContainer">
         {discounts &&
           discounts.map((discount) => (

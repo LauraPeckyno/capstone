@@ -29,7 +29,7 @@ function Restaurants() {
 
         <p>
           We've scoured the web to find the best SENIOR DISCOUNTS for you!
-          Select a category to see a list of discounts available.
+          Here are some of our favorite RESTAURANT DISCOUNTS.
         </p>
         <Featured category="restaurants" featured="true" />
         <Discounts category="restaurants" featured="true" />

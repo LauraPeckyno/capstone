@@ -11,12 +11,12 @@ function Featuredhome({ discounts }) {
       return 0;
     });
   return (
-    <div className="featuredContainer">
+    <div className="featuredContainerHome">
       <h3>Featured Discounts</h3>
-      <div className="discountGridContainer">
+      <div className="discountGridContainerHome">
         {discounts &&
           discounts.map((discount) => (
-            <div key={discount._id} className="discountGridItem">
+            <div key={discount._id} className="discountGridItemHome">
               <h3>{discount.business}</h3>
               <p className="categoryText">{discount.category}</p>
               <p>

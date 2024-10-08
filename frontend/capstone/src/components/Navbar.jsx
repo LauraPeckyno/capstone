@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-// navbar for all pages
 function Navbar() {
+
   return (
     <>
-      <div className="navContainer">
+      <div
+        className="navContainer"
+      >
         <span className="logo"><a href="/">
-          <img src="/logocans.png" width="125px" alt=" a drawing of an elderly man holding a billfold and standing in front of a keystone" /></a>
+          <img className="siteLogo" src="/logocans.png" width="125px" alt=" a drawing of an elderly man holding a billfold and standing in front of a keystone" /></a>
         </span>
         <Link to="/index" className="navItem">
           <div className="iconContainer">
