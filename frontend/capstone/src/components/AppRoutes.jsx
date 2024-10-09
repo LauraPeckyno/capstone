@@ -9,6 +9,9 @@ import Travel from "./Travel";
 import SocialServices from "./SocialServices";
 import { Routes, Route } from "react-router-dom";
 import Entertainment from "./Entertainment";
+import UserPage from "./UserPage";
+import AuthPage from "./AuthPage";
+
 // import { Link } from "react-router-dom";  not needed here
 
 function AppRoutes() {
@@ -27,6 +30,8 @@ function AppRoutes() {
         <Route path="/transportation" element={<Transportation />} />
         <Route path="/travel" element={<Travel />} />
         <Route path="/*" element={<Index />} />
+        <Route path="/userpage" element={<UserPage />} />
+        <Route path="/authpage" element={<AuthPage />} />
       </Routes>
     </>
   );

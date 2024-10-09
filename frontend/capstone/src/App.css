@@ -53,7 +53,7 @@
 .imageContainer {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-  background-image: url("./money.jpg");
+  background-image: url("./money.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -99,7 +99,7 @@
 .imageContainerEntertainment {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-  background-image: url("./popcorn.jpg");
+  background-image: url("./popcorn.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -111,7 +111,7 @@
 .imageContainerGroceries {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-  background-image: url("./groceries2.jpg");
+  background-image: url("./groceries2.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -123,7 +123,7 @@
 .imageContainerHealthcare {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-  background-image: url("./pills3.jpg");
+  background-image: url("./pills3.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -135,7 +135,7 @@
 .imageContainerTelecomm {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-  background-image: url("./phone2.jpg");
+  background-image: url("./phone2.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -147,7 +147,7 @@
 .imageContainerSocialServices {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-  background-image: url("./hands.jpg");
+  background-image: url("./hands.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -159,7 +159,7 @@
 .imageContainerRestaurants {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-  background-image: url("./pizza.jpg");
+  background-image: url("./pizza.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -171,7 +171,7 @@
 .imageContainerShopping {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-  background-image: url("./shopping.jpg");
+  background-image: url("./shopping.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -183,7 +183,7 @@
 .imageContainerTransportation {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-  background-image: url("./bus2.jpg");
+  background-image: url("./bus2.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -195,7 +195,7 @@
 .imageContainerTravel {
   border: solid 0.25px rgba(128, 128, 128, 0.178);
   border-radius: 20px;
-  background-image: url("./airport.jpg");
+  background-image: url("./airport.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -734,9 +734,10 @@
     }
     
     .discountGridContainer {
-      border: solid red;
       display: flex;
       flex-wrap: wrap;
+      padding-left: 0px;
+      margin: 0px;
     }
     
     .discountGridItem {
@@ -1031,8 +1032,7 @@
     .imageContainer {
       border: solid 0.25px rgba(128, 128, 128, 0.178);
       border-radius: 20px;
-      background-image: url("https://plus.unsplash.com/premium_photo-1683141052679-942eb9e77760?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-size: 740px;
+        background-size: 740px;
       height: 200px;
       background-repeat: no-repeat;
       min-width: 740px;
@@ -1087,9 +1087,7 @@
     .imageContainerEntertainment {
       border: solid 0.25px rgba(128, 128, 128, 0.178);
       border-radius: 20px;
-      background-image: url("https://plus.unsplash.com/premium_photo-1723780828572-f4e5de28f49b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-size: 740px;
-      height: 300px;
+        height: 300px;
       background-repeat: no-repeat;
       min-width: 740px;
     }
@@ -1097,9 +1095,7 @@
     .imageContainerGroceries {
       border: solid 0.25px rgba(128, 128, 128, 0.178);
       border-radius: 20px;
-      background-image: url("https://plus.unsplash.com/premium_photo-1663126491340-e96b3b7205b6?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-size: 740px;
-      height: 300px;
+        height: 300px;
       background-repeat: no-repeat;
       min-width: 740px;
     }
@@ -1107,8 +1103,7 @@
     .imageContainerHealthcare {
       border: solid 0.25px rgba(128, 128, 128, 0.178);
       border-radius: 20px;
-      background-image: url("https://plus.unsplash.com/premium_photo-1681995528803-12eb15daf147?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-size: 740px;
+          background-size: 740px;
       height: 300px;
       background-repeat: no-repeat;
       min-width: 740px;
@@ -1117,9 +1112,7 @@
     .imageContainerTelecomm {
       border: solid 0.25px rgba(128, 128, 128, 0.178);
       border-radius: 20px;
-      background-image: url("https://plus.unsplash.com/premium_photo-1661338963863-7544b69e1968?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-size: 740px;
-      height: 300px;
+           height: 300px;
       background-repeat: no-repeat;
       min-width: 740px;
     }
@@ -1127,8 +1120,7 @@
     .imageContainerSocialServices {
       border: solid 0.25px rgba(128, 128, 128, 0.178);
       border-radius: 20px;
-      background-image: url("https://images.unsplash.com/photo-1666885181601-73c2f69ac354?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-size: 740px;
+           background-size: 740px;
       height: 300px;
       background-repeat: no-repeat;
       min-width: 740px;
@@ -1137,8 +1129,7 @@
     .imageContainerRestaurants {
       border: solid 0.25px rgba(128, 128, 128, 0.178);
       border-radius: 20px;
-      background-image: url("https://images.unsplash.com/photo-1533640924469-f04e06f8898d?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-size: 740px;
+            background-size: 740px;
       height: 300px;
       background-repeat: no-repeat;
       min-width: 740px;
@@ -1147,8 +1138,7 @@
     .imageContainerShopping {
       border: solid 0.25px rgba(128, 128, 128, 0.178);
       border-radius: 20px;
-      background-image: url("https://images.unsplash.com/photo-1584797802294-190bd128cc83?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-size: 740px;
+         background-size: 740px;
       height: 300px;
       background-repeat: no-repeat;
       min-width: 740px;
@@ -1157,8 +1147,7 @@
     .imageContainerTransportation {
       border: solid 0.25px rgba(128, 128, 128, 0.178);
       border-radius: 20px;
-      background-image: url("https://plus.unsplash.com/premium_photo-1682145057803-52f4640edd1e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-size: 740px;
+          background-size: 740px;
       height: 300px;
       background-repeat: no-repeat;
       min-width: 740px;
@@ -1167,8 +1156,7 @@
     .imageContainerTravel {
       border: solid 0.25px rgba(128, 128, 128, 0.178);
       border-radius: 20px;
-      background-image: url("https://plus.unsplash.com/premium_photo-1679758630055-99ebb2df7d77?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-size: 740px;
+          background-size: 740px;
       height: 300px;
       background-repeat: no-repeat;
       min-width: 740px;
