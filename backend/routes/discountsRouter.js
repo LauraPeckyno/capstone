@@ -1,7 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const discountsController = require("../controllers/discountsController");
+const ensureLoggedIn = require('../config/ensureLoggedIn');
 
+// protected routes
+router.post("/", ensureLoggedIn, discountsController.createDiscount);
+router.put("/:id", ensureLoggedIn, discountsController.updateDiscount);
+router.delete("/:id", ensureLoggedIn, discountsController.deleteDiscount);
+
+
+// public routes
 router.get("/", discountsController.readDiscount); // Get all discounts
 
 // New route for featured discounts
@@ -20,9 +28,7 @@ router.get("/category/:category", discountsController.getDiscountsByCategory); /
 router.get("/featured", discountsController.getFeaturedDiscounts); // Get all featured discounts
 
 router.get("/:id", discountsController.readDiscountById); // Get discount by ID
-router.post("/", discountsController.createDiscount); // Create a new discount
-router.put("/:id", discountsController.updateDiscount); // Update discount by ID
-router.delete("/:id", discountsController.deleteDiscount); // Delete discount by ID
+
 
 // Error handler
 router.use((err, req, res, next) => {

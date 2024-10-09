@@ -1,18 +1,57 @@
 const Discount = require("../models/discount");
+const ensureLoggedIn = require("../config/ensureLoggedIn");
 
 // create discount
 const createDiscount = async (req, res) => {
-  const { business, url, discount, eligibility, category } = req.body;
-  const discountNew = await Discount.create({
-    business: business,
-    url: url,
-    discount: discount,
-    eligibility: eligibility,
-    category: category,
-  });
-  res.json({ discount: discountNew });
-  // res.render('discounts', { discount: discount });
+  try {
+    const { business, url, discount, eligibility, category } = req.body;
+    const discountNew = await Discount.create({
+      business,
+      url,
+      discount,
+      eligibility,
+      category,
+    });
+    res.json({ discount: discountNew });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error creating discount' });
+  }
 };
+
+// update discount
+const updateDiscount = async (req, res) => {
+  try {
+    const discountId = req.params.id;
+    const { business, url, discount, eligibility, category } = req.body;
+    const updatedDiscount = await Discount.findByIdAndUpdate(discountId, {
+      business,
+      url,
+      discount,
+      eligibility,
+      category,
+    }, { new: true });
+    console.log("Discount updated");
+    res.json({ discount: updatedDiscount });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error updating discount' });
+  }
+};
+
+// delete discount
+const deleteDiscount = async (req, res) => {
+  try {
+    const discountId = req.params.id;
+    await Discount.findByIdAndDelete(discountId);
+    res.json({ success: "Discount deleted" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error deleting discount' });
+  }
+};
+
+
 
 // read discounts
 const readDiscount = async (req, res) => {
@@ -34,32 +73,6 @@ const readDiscountById = async (req, res) => {
   console.log("fetch discount by id");
   res.json({ discount: thisDiscount });
   // res.render('discounts', { discount: thisDiscount });
-};
-
-// update discount
-const updateDiscount = async (req, res) => {
-  const discountId = req.params.id;
-  const { business, url, discount, eligibility, category } = req.body;
-  const discountName = await Discount.findByIdAndUpdate(discountId, {
-    business: business,
-    url: url,
-    discount: discount,
-    eligibility: eligibility,
-    category: category,
-  });
-  const updatedDiscount = await Discount.findById(discountId);
-  console.log("update Discount");
-  res.json({ discountName: updatedDiscount });
-  // res.render('discounts', { discount: updatedDiscount });
-};
-
-// delete Discount
-const deleteDiscount = async (req, res) => {
-  const discountId = req.params.id;
-  await Discount.deleteOne({
-    _id: discountId,
-  });
-  res.json({ success: "discount deleted" });
 };
 
 // find featured discounts by category
@@ -118,8 +131,8 @@ const searchDiscounts = async (req, res) => {
 module.exports = {
   readDiscount,
   readDiscountById,
-  updateDiscount,
   createDiscount,
+  updateDiscount,
   deleteDiscount,
   getDiscountsByCategory,
   getFeaturedDiscountsByCategory,
