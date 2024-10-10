@@ -1,16 +1,29 @@
-Jsx
-import React from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Profile from './Profile';
-import SignUpForm from './SignUpForm'; // Import SignUpForm
 import { logout } from '../utilities/users-service';
+import UserContext from './UserContext';
+import { UserProvider } from './UserContext';
+import AuthPage from './AuthPage';
 
-function UserPage({ user }) {
+function UserPage() {
+  const { user, setUser } = useContext(UserContext);
+  const navigate = useNavigate(); // Initialize navigate hook
+
+  // If user is null, redirect to the AuthPage for sign-up
+  useEffect(() => {
+    if (!user) {
+      navigate("/authpage"); // Redirect to the AuthPage for login/sign-up
+    }
+  }, [user, navigate]);
+
   const handleLogout = async () => {
     try {
       await logout();
-      // Redirect to login page
+      setUser(null);
+      navigate("/authpage"); // Redirect to AuthPage on logout
     } catch (error) {
-      // Handle error
+      console.error(error);
     }
   };
 
@@ -22,7 +35,7 @@ function UserPage({ user }) {
           <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (
-        <SignUpForm /> // Render SignUpForm if no user
+        <AuthPage setUser={setUser} />
       )}
     </div>
   );

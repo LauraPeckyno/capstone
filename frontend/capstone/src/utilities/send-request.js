@@ -21,6 +21,8 @@ export async function sendRequest(url, method = 'GET', payload = null) {
     const res = await fetch(url, options);
     // res.ok will be false if the status code set to 4xx in the controller action
     if (res.ok) return res.json();
+    const errorResponse = await res.text();  // Capture the error response body
+console.error("API request failed:", errorResponse);
     throw new Error('Bad Request');
   }
   

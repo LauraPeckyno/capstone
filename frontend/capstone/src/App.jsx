@@ -1,17 +1,16 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Helmet } from 'react-helmet';  // to set a featured image for the site
+import { Helmet } from "react-helmet"; // to set a featured image for the site
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router } from 'react-router-dom';
-import AppRoutes from './components/AppRoutes';
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./components/AppRoutes";
 import Footer from "./components/Footer";
-import {getUser} from './utilities/users-service'
+import { getUser } from "./utilities/users-service";
 import UserPage from "./components/UserPage";
-
+import { UserProvider } from "./components/UserContext"; // Import UserProvider
 
 function App() {
-
   // -------------------------------
   const [discount, setDiscount] = useState([]);
   const [user, setUser] = useState(null);
@@ -33,7 +32,7 @@ function App() {
     const checkUser = async () => {
       const storedUser = await getUser(); // Check for stored user after app loads
       setUser(storedUser);
-    }
+    };
     checkUser();
   }, []); // Empty dependency array to run only once on component mount
 
@@ -52,23 +51,20 @@ function App() {
     setUser(null);
   };
 
-  const isProtected = (path) => path !== '/authpage' && path !== '/userpage'; // Adjust as needed
-
-
-  
+  const isProtected = (path) => path !== "/authpage" && path !== "/userpage"; // Adjust as needed
 
   return (
     <div className="App">
-            <Helmet>
-        <meta property="og:image" content="./money.png" />
-      </Helmet>
-      <Router>
-    <Navbar />
-    <AppRoutes />
-    <Footer />
-     </Router>
-    
-
+      <UserProvider>
+        <Helmet>
+          <meta property="og:image" content="./money.png" />
+        </Helmet>
+        <Router>
+          <Navbar />
+          <AppRoutes />
+          <Footer />
+        </Router>
+      </UserProvider>
     </div>
   );
 }

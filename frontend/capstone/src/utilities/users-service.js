@@ -6,28 +6,31 @@ export function checkToken() {
 
 export async function login(credentials) {
   const token = await usersAPI.login(credentials);
-  console.log(`Token: ${token}`);
-  localStorage.setItem("token", token);
-  console.log("Check Local Storage");
-  return getUser();
+  console.log('JWT Token:', token);  // Check if the token is being returned
+  localStorage.setItem('token', token);
+  const user = getUser(token);  // Fetch user using the token directly
+  return user;
 }
 
 export async function signUp(userData) {
-  const token = await usersAPI.signUp(userData);
-  localStorage.setItem("token", token);
-  return token;
+  try {
+    const token = await usersAPI.signUp(userData);
+    localStorage.setItem('token', token); // Store the token in localStorage
+    const user = getUser(); // Decode the user from the token
+    console.log('Decoded User:', user); // Log the decoded user
+    return user;
+  } catch (error) {
+    console.error("Sign Up Error:", error); // Log error for debugging
+    throw error; // Re-throw the error to be handled in the calling component
+  }
 }
 
 export function getToken() {
-  // getItem returns null if there's no string
-  const token =localStorage.getItem("token");
+  const token = localStorage.getItem("token");
   console.log("Token:", token);
   if (!token) return null;
-  // Obtain the payload of the token
-  const payload =JSON.parse(atob(token.split(".")[1]));
-  // A JWT's exp is expressed in seconds, not milliseconds, so convert
+  const payload = JSON.parse(atob(token.split(".")[1]));
   if (payload.exp < Date.now() / 1000) {
-    // Token has expired - remove it from localStorage
     localStorage.removeItem("token");
     return null;
   }
@@ -35,14 +38,10 @@ export function getToken() {
 }
 
 export function getUser() {
-  console.log("Attempting to get user");
-  const token =getToken();
-  // If there's a token, return the user in the payload, otherwise return null
-  console.log("Searching for Token");
-  return token ? JSON.parse(atob(token.split(".")[1])).user : null;
+  const token = getToken(); // Retrieve the JWT from localStorage
+  return token ? JSON.parse(atob(token.split(".")[1])).user : null; // Decode and return the user
 }
 
 export async function logout() {
   localStorage.removeItem("token");
-  setUser(null); // 
 }

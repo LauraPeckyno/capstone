@@ -1,67 +1,99 @@
-import React, { Component } from 'react';
-import { signUp, logout } from '../utilities/users-service';
+import React, { useState } from 'react';
+import { signUp } from '../utilities/users-service';
 
-export default class SignUpForm extends Component {
-  state = {
-    name: '',
-    email: '',
-    password: '',
-    confirm: '',
-    error: '',
-    success: false,
-  };
+export default function SignUpForm({ setUser }) {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirm, setConfirm] = useState('');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
 
-  handleChange = (evt) => {
-    this.setState({
-      [evt.target.name]: evt.target.value,
-      error: '',
-    });
-  };
-
-  handleLogout = async () => {
-    try {
-      await logout();
-      this.setState({ success: false }); // Reset success state
-    } catch (error) {
-      console.error('Error logging out:', error);
+  const handleChange = (evt) => {
+    switch (evt.target.name) {
+      case 'name':
+        setName(evt.target.value);
+        break;
+      case 'email':
+        setEmail(evt.target.value);
+        break;
+      case 'password':
+        setPassword(evt.target.value);
+        break;
+      case 'confirm':
+        setConfirm(evt.target.value);
+        break;
+      default:
+        break;
     }
+    setError('');
   };
 
-  handleSubmit = async (evt) => {
+  const handleSubmit = async (evt) => {
     evt.preventDefault();
+    if (password !== confirm) {
+      setError('Passwords do not match');
+      return;
+    }
+
     try {
-      const formData = { ...this.state };
-      delete formData.error;
-      delete formData.confirm;
-      const user = await signUp(formData);
-      this.setState({ success: true }); // Set success state
+      const userData = await signUp({ name, email, password });
+      setUser(userData);
+      setSuccess(true);
     } catch (error) {
-      this.setState({ error: 'Sign Up Failed - Try Again' });
+      console.error('Signup error:', error);
+      setError('Signup failed - Please try again');
     }
   };
 
-  render() {
-    const disable = this.state.password !== this.state.confirm;
-
-    if (this.state.success) {
-      return (
-        <div>
-          <h1>Sign Up Successful!</h1>
-          <p>Welcome to our community!</p>
-          <button onClick={this.handleLogout}>Logout</button>
-        </div>
-      );
-    }
-
+  if (success) {
     return (
-      // Signup form
       <div>
-        <h1>Sign Up</h1>
-        <form autoComplete="off" onSubmit={this.handleSubmit}>
-          {/* Form fields */}
-        </form>
-        {this.state.error && <p style={{ color: 'red' }}>{this.state.error}</p>}
+        <h1>Sign Up Successful!</h1>
+        <p>Welcome to our community!</p>
       </div>
     );
   }
+
+  return (
+    <div>
+      <h1>Sign Up</h1>
+      <form autoComplete="off" onSubmit={handleSubmit}>
+        <label>Name</label>
+        <input
+          type="text"
+          name="name"
+          value={name}
+          onChange={handleChange}
+          required
+        />
+        <label>Email</label>
+        <input
+          type="email"
+          name="email"
+          value={email}
+          onChange={handleChange}
+          required
+        />
+        <label>Password</label>
+        <input
+          type="password"
+          name="password"
+          value={password}
+          onChange={handleChange}
+          required
+        />
+        <label>Confirm</label>
+        <input
+          type="password"
+          name="confirm"
+          value={confirm}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit">SIGN UP</button>
+      </form>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+    </div>
+  );
 }
