@@ -28,6 +28,8 @@ async function create(req, res) {
     console.log(`User : ${req.body}, Token: ${token}`);
   } catch (error) {
     res.status(400).json(error);
+    console.error("Error creating user:", error);  // Log the actual error
+    res.status(400).json({ message: "Error creating user", error });
   }
 }
 
