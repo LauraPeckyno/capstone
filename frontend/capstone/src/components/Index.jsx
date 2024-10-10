@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Featuredhome from "./Featuredhome";
 import SearchBar from "./Searchbar";
-import SearchResults from "./SearchResults";
+import SearchResults from "./Searchresults";
 
 function Index() {
   const [featuredDiscounts, setFeaturedDiscounts] = useState([]);
