@@ -18,14 +18,6 @@ connectToDb().then(() => {
   process.exit(1);
 });
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-
-
-const cors = require("cors");
-var whitelist = ["http://localhost:5173", "https://pa-seniordiscounts.netlify.app"];
-var corsOptions = { origin: whitelist, credentials: true };
-app.use(cors(corsOptions));
 
 // ------->------->-------> Imports
 // ------->------->-------> Middleware
