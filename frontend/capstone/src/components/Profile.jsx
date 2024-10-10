@@ -8,7 +8,7 @@ function Profile({ user }) {
   }
 
   return (
-    <div>
+    <div className="outerContainer">
 
       <h1>Welcome, {user.name}!</h1>
 

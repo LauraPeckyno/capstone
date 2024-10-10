@@ -56,41 +56,41 @@ export default function SignUpForm({ setUser }) {
   }
 
   return (
-    <div>
+    <div className="outerContainer">
       <h1>Sign Up</h1>
       <form autoComplete="off" onSubmit={handleSubmit}>
-        <label>Name</label>
+        <label>Name</label><br></br>
         <input
           type="text"
           name="name"
           value={name}
           onChange={handleChange}
           required
-        />
-        <label>Email</label>
+        /><br></br>
+        <label>Email</label><br></br>
         <input
           type="email"
           name="email"
           value={email}
           onChange={handleChange}
           required
-        />
-        <label>Password</label>
+        /><br></br>
+        <label>Password</label><br></br>
         <input
           type="password"
           name="password"
           value={password}
           onChange={handleChange}
           required
-        />
-        <label>Confirm</label>
+        /><br></br>
+        <label>Confirm</label><br></br>
         <input
           type="password"
           name="confirm"
           value={confirm}
           onChange={handleChange}
           required
-        />
+        /><br></br>
         <button type="submit">SIGN UP</button>
       </form>
       {error && <p style={{ color: 'red' }}>{error}</p>}
