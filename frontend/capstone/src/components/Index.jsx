@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Featuredhome from "./Featuredhome";
-import SearchBar from "./SearchBar";
+import SearchBar from "./Searchbar";
 import SearchResults from "./SearchResults";
 
 function Index() {
