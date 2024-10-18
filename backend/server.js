@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const cors = require('cors')
+const cors = require('cors');
 const path = require("path");
-const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser');
 
 const mongoose = require('mongoose');
 require('dotenv').config();
@@ -21,19 +21,19 @@ connectToDb().then(() => {
 
 // ------->------->-------> Imports
 // ------->------->-------> Middleware
-const ensureLoggedIn = require('./config/ensureLoggedIn')
+const ensureLoggedIn = require('./config/ensureLoggedIn');
 app.use(express.json());
 //  data -> json
 
-app.use(require('./config/checkToken'))
+app.use(require('./config/checkToken'));
 
 
-app.use(cookieParser())
-
-app.use(cors({
-  origin: '*',
-  credentials: true
-}));
+app.use(cookieParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+var whitelist = ["http://localhost:5173", "https://pa-senior-discounts.netlify.app"];
+var corsOptions = { origin: whitelist, credentials: true };
+app.use(cors(corsOptions));
 
 const discountsController = require('./controllers/discountsController');
 const discountsRouter = require('./routes/discountsRouter');
