@@ -31,7 +31,7 @@ app.use(require('./config/checkToken'));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-var whitelist = ["http://localhost:5173", "https://pa-senior-discounts.netlify.app"];
+var whitelist = ["http://localhost:5173", "http://localhost:3000", "https://pa-senior-discounts.netlify.app"];
 var corsOptions = { origin: whitelist, credentials: true };
 app.use(cors(corsOptions));
 
